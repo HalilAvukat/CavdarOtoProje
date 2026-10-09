@@ -1,0 +1,26 @@
+/* Sidebar */
+.sidebar {
+    position: sticky;
+    top: 48px;
+    height: calc(100vh - 48px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 1px solid rgba(0, 0, 0, .1);
+    background-color: #32151C;
+}
+
+    .sidebar .nav-link {
+        font-weight: 500;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        transition: all 0.2s ease;
+    }
+
+        .sidebar .nav-link:hover {
+            background-color: red ;
+            color: white ;
+        }
+
+        .sidebar .nav-link .fa-solid {
+            margin-right: 6px;
+        }
