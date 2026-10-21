@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -33,7 +33,7 @@ namespace CavdarOtoProje.Models
 
         public int Stock { get; set; }
 
-        public bool IsDeleted { get; set; } = true;
+        public bool IsDeleted { get; set; } = false;
 
 
         public virtual List<UserCart> UserCarts { get; set; }

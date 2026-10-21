@@ -16,6 +16,10 @@ namespace CavdarOtoProje.Areas.AdminPanel.Controllers
         {
             return View(db.Products.Where(x=> x.IsDeleted == false).ToList());
         }
+        public ActionResult IndexAll()
+        {
+            return View(db.Categories.ToList());
+        }
 
         public ActionResult Create()
         {
@@ -90,12 +94,12 @@ namespace CavdarOtoProje.Areas.AdminPanel.Controllers
             ViewBag.CategoryID = new SelectList(db.Categories.Where(x => x.IsDeleted == false), "ID", "Name", model.CategoryID);
             return View(model);
         }
-
+        // GET: AdminPanel/Product/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
-
+        // POST: AdminPanel/Product/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
